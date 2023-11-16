@@ -17,13 +17,6 @@ int main(int argc, char** argv)
 	init_args();
 	get_stream(argv[1]);
 
-	arguments = malloc(sizeof(args_t));
-	if (arguments == NULL)
-		malloc_failed();
-
-	init_arg();
-	setStream(argv[1]);
-
 	while ((lines_read = getline(&arguments->line, &n, arguments->stream)) != -1)
 	{
 		arguments->line_number += 1;
