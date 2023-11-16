@@ -23,7 +23,7 @@ void invalid_instruction(void)
 			arguments->line_number, arguments->line_strs[0]);
 	closeStream();
 	free_toks();
-	free_arg();
+	free_args();
 	exit(EXIT_FAILURE);
 }
 

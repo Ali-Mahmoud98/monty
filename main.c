@@ -8,7 +8,7 @@ args_t *arguments = NULL;
  *
  * Return: 0 means SUCCESS
 */
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	ssize_t lines_read = 0;
 	size_t n = 0;
@@ -22,12 +22,12 @@ int main(int argc, char** argv)
 		arguments->line_number += 1;
 		tokenize();
 		setInstruction();
-		runInstruction();
+		run_instruction();
 		free_toks();
 	}
 
 	closeStream();
-	free_arg();
+	free_args();
 
 	return (0);
 }

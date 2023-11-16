@@ -3,7 +3,7 @@
  * free_arg - Frees the memory allocated for the argument
  * structure and its members.
  */
-void free_arg(void)
+void free_args(void)
 {
 	if (arguments == NULL)
 		return;
@@ -61,7 +61,7 @@ void free_all_args(void)
 {
 	closeStream();
 	free_toks();
-	free_arg();
+	free_args();
 }
 /**
  * free_stackHead - Frees the memory allocated for the stackHead and

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -64,14 +65,14 @@ extern args_t *arguments;
 /*Functions*/
 /*Arguments functions handler*/
 void validate_args(int argc);
-void malloc_faild();
-void init_args();
+void malloc_failed(void);
+void init_args(void);
 void read_failed(char *fileName);
 /*Stream function handlers*/
 void get_stream_failed(char *fileName);
 void get_stream(char *fileName);
 /*free functions*/
-void free_arg(void);
+void free_args(void);
 void closeStream(void);
 void free_toks(void);
 void free_all_args(void);
@@ -86,6 +87,9 @@ void setStream(char *fileName);
 void setInstruction(void);
 /*stack funcs*/
 void delete_stack_Top_node(void);
+/*Checking funcs*/
+int is_comment(void);
+int is_number(char *);
 /*push pall function*/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);

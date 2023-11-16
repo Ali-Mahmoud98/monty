@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * malloc_faild - handle the failure of allocation.
+ * malloc_failed - handle the failure of allocation.
 */
-void malloc_faild()
+void malloc_failed()
 {
     dprintf(2, "Error: malloc failed\n");
     free_args();
@@ -15,8 +15,8 @@ void init_args()
 {
     arguments = malloc(sizeof(args_t));
     if (arguments == NULL)
-        malloc_faild();
-    
+        malloc_failed();
+
     arguments->instruction = malloc(sizeof(instruction_t));
 	if (arguments->instruction == NULL)
 		malloc_failed();
@@ -39,6 +39,6 @@ void init_args()
 void read_failed(char *fileName)
 {
 	fprintf(stderr, "Error: Can't open file %s\n", fileName);
-	free_arg();
+	free_args();
 	exit(EXIT_FAILURE);
 }
