@@ -62,6 +62,7 @@ void setInstruction(void)
 		{"pint", &pint},
 		{"pop", &pop},
 		{"swap", &swap},
+		{"add", &add},
 		{NULL, NULL}
 	};
 

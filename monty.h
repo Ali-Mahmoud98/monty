@@ -100,4 +100,6 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 /*swap function*/
 void swap(stack_t **stack, unsigned int line_number);
+/*add function*/
+void add(stack_t **stack, unsigned int line_number);
 #endif
