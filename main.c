@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 	init_args();
 	get_stream(argv[1]);
 
-	while ((lines_read = getline(&arguments->line, &n, arguments->stream)) != -1)
+	while ((lines_read = getline(&arguments->line, &n, arguments->stream)) != EOF)
 	{
 		arguments->line_number += 1;
 		tokenize();
