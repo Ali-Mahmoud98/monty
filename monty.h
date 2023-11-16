@@ -102,4 +102,6 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 /*add function*/
 void add(stack_t **stack, unsigned int line_number);
+/*nop function*/
+void nop(stack_t **stack, unsigned int line_number);
 #endif
