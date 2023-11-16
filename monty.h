@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -75,5 +76,7 @@ void free_toks(void);
 void free_all_args(void);
 void free_stackHead(void);
 void free_stack(stack_t *head);
+/*tokenize function*/
+void tokenize(void);
 
 #endif
