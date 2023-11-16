@@ -80,11 +80,14 @@ void free_stack(stack_t *head);
 /*tokenize function*/
 void tokenize(void);
 /*Instruction functions*/
-void runInstruction(void);
+void run_instruction(void);
 void invalid_instruction(void);
 void setStream(char *fileName);
 void setInstruction(void);
 /*stack funcs*/
 void delete_stack_Top_node(void);
+/*push pall function*/
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 #endif
