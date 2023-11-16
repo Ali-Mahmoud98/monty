@@ -65,7 +65,7 @@ void setInstruction(void)
 		{"add", &add},
 		{"nop", &nop},
 		{"sub", &sub},
-		{"div", &div},
+		{"div", &divn},
 		{"mul", &mul},
 		{NULL, NULL}
 	};

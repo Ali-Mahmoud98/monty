@@ -107,7 +107,7 @@ void nop(stack_t **stack, unsigned int line_number);
 /*sub function*/
 void sub(stack_t **stack, unsigned int line_number);
 /*div function*/
-void div(stack_t **stack, unsigned int line_number);
+void divn(stack_t **stack, unsigned int line_number);
 /*mul function*/
 void mul(stack_t **stack, unsigned int line_number);
 #endif
