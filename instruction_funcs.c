@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
- * runInstruction - Runs the instruction specified by the arguments.
+ * run_instruction - Runs the instruction specified by the arguments.
  */
 
-void runInstruction(void)
+void run_instruction(void)
 {
 	stack_t *stack = NULL;
 
@@ -57,6 +57,8 @@ void setInstruction(void)
 {
 	int i = 0;
 	instruction_t instructions[] = {
+		{"push", &push},
+		{"pall", &pall},
 		{NULL, NULL}
 	};
 
