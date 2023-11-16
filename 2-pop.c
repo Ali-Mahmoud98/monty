@@ -12,7 +12,7 @@ void pop(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		closeStream();
 		free_toks();
-		free_arg();
+		free_args();
 		exit(EXIT_FAILURE);
 	}
 
