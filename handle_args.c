@@ -31,3 +31,14 @@ void init_args()
 	arguments->stack_length = 0;
 	arguments->stream = NULL;
 }
+
+/**
+ * read_failed - Handles the error when reading a file fails.
+ * @fileName: The name of the file that failed to open.
+ */
+void read_failed(char *fileName)
+{
+	fprintf(stderr, "Error: Can't open file %s\n", fileName);
+	free_arg();
+	exit(EXIT_FAILURE);
+}

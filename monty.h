@@ -66,6 +66,7 @@ extern args_t *arguments;
 void validate_args(int argc);
 void malloc_faild();
 void init_args();
+void read_failed(char *fileName);
 /*Stream function handlers*/
 void get_stream_failed(char *fileName);
 void get_stream(char *fileName);
@@ -83,5 +84,7 @@ void runInstruction(void);
 void invalid_instruction(void);
 void setStream(char *fileName);
 void setInstruction(void);
+/*stack funcs*/
+void delete_stack_Top_node(void);
 
 #endif
