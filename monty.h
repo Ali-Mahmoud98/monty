@@ -78,5 +78,10 @@ void free_stackHead(void);
 void free_stack(stack_t *head);
 /*tokenize function*/
 void tokenize(void);
+/*Instruction functions*/
+void runInstruction(void)
+void invalid_instruction(void)
+void setStream(char *fileName)
+void setInstruction(void)
 
 #endif
