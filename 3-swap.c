@@ -8,7 +8,7 @@
 void swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int len = 0;
 
 	h = *stack;
 	while (h)
@@ -24,8 +24,8 @@ void swap(stack_t **stack, unsigned int line_number)
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
-	h = *stack;
-	aux = h->n;
-	h->n = h->next->n;
-	h->next->n = aux;
+	h = (*stack)->next;
+	(*stack)->prev = h->prev;
+	h->prev = *stack;
+	*stack = h;
 }
