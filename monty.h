@@ -98,5 +98,6 @@ void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 /*pop function*/
 void pop(stack_t **stack, unsigned int line_number);
-
+/*swap function*/
+void swap(stack_t **stack, unsigned int line_number);
 #endif
