@@ -19,8 +19,8 @@ void div(stack_t **stack, unsigned int line_number)
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
-		fclose(arguments->stream);
-		free(arguments->line);
+		closeStream();
+		free_args();
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
@@ -28,7 +28,7 @@ void div(stack_t **stack, unsigned int line_number)
 	if (h->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_number);
-		fclose(arguments->stream);
+		closeStream();
 		free(arguments->line);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
