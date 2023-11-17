@@ -110,4 +110,6 @@ void sub(stack_t **stack, unsigned int line_number);
 void divn(stack_t **stack, unsigned int line_number);
 /*mul function*/
 void mul(stack_t **stack, unsigned int line_number);
+/*mod function*/
+void mod(stack_t **stack, unsigned int line_number);
 #endif

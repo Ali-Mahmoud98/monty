@@ -7,23 +7,28 @@
  */
 void sub(stack_t **stack, unsigned int line_number)
 {
-	stack_t *aux;
-	int sus, nodes;
+	stack_t *ptr1, *ptr2;
 
-	aux = *stack;
-	for (nodes = 0; aux != NULL; nodes++)
-		aux = aux->next;
-	if (nodes < 2)
+	(void) stack;
+	if (arguments->stack_length < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
-		closeStream();
-		free_args();
-		free_stack(*stack);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		free_all_args();
 		exit(EXIT_FAILURE);
 	}
-	aux = *stack;
-	sus = aux->next->n - aux->n;
-	aux->next->n = sus;
-	*stack = aux->next;
-	free(aux);
+
+	ptr1 = arguments->stackHead;
+	ptr2 = ptr1->next;
+
+	if (ptr1->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		free_all_args();
+		exit(EXIT_FAILURE);
+	}
+
+	ptr2->n = ptr2->n - ptr1->n;
+	delete_stack_Top_node();
+
+	arguments->stack_length -= 1;
 }

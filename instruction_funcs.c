@@ -67,6 +67,7 @@ void setInstruction(void)
 		{"sub", &sub},
 		{"div", &divn},
 		{"mul", &mul},
+		{"mul", &mod},
 		{NULL, NULL}
 	};
 
