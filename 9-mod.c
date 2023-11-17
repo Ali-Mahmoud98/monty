@@ -30,7 +30,7 @@ void mod(stack_t **stack, unsigned int line_number)
 	}
 
 	ptr2->n = ptr2->n % ptr1->n;
-	delete_stack_node();
+	delete_stack_Top_node();
 
 	arguments->stack_length -= 1;
 }
