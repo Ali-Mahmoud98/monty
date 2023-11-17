@@ -60,7 +60,7 @@ void setInstruction(void)
 		{"push", &push}, {"pchar", &pchar},
 		{"pall", &pall}, {"pstr", &pstr},
 		{"pint", &pint}, {"rotl", &rotl},
-		{"pop", &pop},
+		{"pop", &pop}, {"rotr", &rotr},
 		{"swap", &swap},
 		{"add", &add},
 		{"nop", &nop},
