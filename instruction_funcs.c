@@ -57,7 +57,7 @@ void setInstruction(void)
 {
 	int i = 0;
 	instruction_t instructions[] = {
-		{"push", &push},
+		{"push", &push}, {"pchar", &pchar},
 		{"pall", &pall},
 		{"pint", &pint},
 		{"pop", &pop},
