@@ -18,7 +18,8 @@ void swap(stack_t **stack, unsigned int line_number)
 	}
 	ptr1 = arguments->stackHead;
 	ptr2 = ptr1->next;
-	if (ptr1->next)
+	ptr1->next = ptr2->next;
+	if (ptr1->next != NULL)
 		ptr1->next->prev = ptr1;
 	ptr2->next = ptr1;
 	ptr2->prev = NULL;

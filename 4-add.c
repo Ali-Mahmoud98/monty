@@ -7,26 +7,28 @@
 */
 void add(stack_t **stack, unsigned int line_number)
 {
-	stack_t *h;
-	int len = 0, aux;
+		stack_t *ptr1, *ptr2;
 
-	h = *stack;
-	while (h)
+	(void) stack;
+	if (arguments->stack_length < 2)
 	{
-		h = h->next;
-		len++;
-	}
-	if (len < 2)
-	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
-		closeStream();
-		free_args();
-		free_stack(*stack);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		free_all_args();
 		exit(EXIT_FAILURE);
 	}
-	h = *stack;
-	aux = h->n + h->next->n;
-	h->next->n = aux;
-	*stack = h->next;
-	free(h);
+
+	ptr1 = arguments->stackHead;
+	ptr2 = ptr1->next;
+
+	if (ptr1->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		free_all_args();
+		exit(EXIT_FAILURE);
+	}
+
+	ptr2->n = ptr2->n + ptr1->n;
+	delete_stack_Top_node();
+
+	arguments->stack_length -= 1;
 }

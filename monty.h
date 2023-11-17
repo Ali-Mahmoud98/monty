@@ -1,6 +1,7 @@
 #ifndef MONTY_H_
 #define MONTY_H_
 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,7 +9,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-
+#include <stddef.h>
+#define NO_OF_INSTRUCTIONS 7
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -113,4 +115,5 @@ void mul(stack_t **stack, unsigned int line_number);
 /*mod function*/
 void mod(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
+
 #endif
