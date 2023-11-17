@@ -112,4 +112,5 @@ void divn(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 /*mod function*/
 void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
 #endif
