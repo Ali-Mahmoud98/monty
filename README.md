@@ -9,14 +9,22 @@ All your files will be compiled on Ubuntu 22.04.2 LTS using gcc, using the optio
 
 ## Installation
 ### Clone the repository:
-```git clone https://github.com/Ali-Mahmoud98/monty.git```
+```
+git clone https://github.com/Ali-Mahmoud98/monty.git
+```
 ### Usage:
 1. Enter monty directory
-```cd monty```
+```
+cd monty
+```
 2. Compile:
-```gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty```
+```
+gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
+```
 3. Run:
-```./monty byteCodes/file.m```
+```
+./monty byteCodes/file.m
+```
 
 ## The monty program
 * Usage: monty file
