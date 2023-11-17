@@ -4,7 +4,7 @@
  * @stack: pointer to pointer to stack_t.
  * @line_number: number.
 */
-void rotl(stack_t **stack, unsigned int line_number)
+void rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr1, *ptr2;
 
